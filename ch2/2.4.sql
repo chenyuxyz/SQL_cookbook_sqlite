@@ -9,5 +9,6 @@ FROM (
   FROM EMP
 )
 ORDER BY
-  RANDOM()
+  SUBSTR(data, 0, INSTR(data, " "))
+  -- SUBSTR(data, INSTR(data, " ") + 1) for sorting by deptno
 ;
